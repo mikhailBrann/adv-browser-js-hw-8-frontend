@@ -35,6 +35,8 @@ jobs:
           node-version: 20.11.0
           cache: 'npm'
       - run: npm install
+      # Добавляем настройку времени ожидания ответа на запрос
+      - run: echo "http.retries=3\nhttp.followRedirects=5\nhttp.timeout=120" >> $GITHUB_WORKSPACE/.npmrc
       - run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
