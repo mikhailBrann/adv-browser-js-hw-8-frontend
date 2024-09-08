@@ -1,0 +1,139 @@
+:root {
+    --border-big: 1px solid gray;
+    --padding-big: 15px;
+    --padding-small: 5px;
+}
+
+.auth-form {
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+    border: var(--border-big);
+    box-sizing: border-box;
+    padding: var(--padding-big);
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--padding-small);
+}
+
+form.form-auth {
+    display: grid;
+    gap: 10px;
+}
+
+.form-auth__body.form__body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form__title {
+    text-align: center;
+}
+
+.form__input {
+    padding: var(--padding-small);
+    outline: none;
+    border:var(--border-big);
+}
+
+.form-auth__body [type=submit] {
+    padding: var(--padding-small);
+    border-radius: var(--padding-small);
+    background: #fff;
+}
+.chat {
+    width: 600px;
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: 1.5fr 5fr;
+    align-items: baseline;
+}
+
+.chat ul {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.chat li {
+    list-style: none;
+}
+
+.chat__list {
+    border: var(--border-big);
+    border-radius: 5px;
+    padding: 10px;
+    top: 20px;
+    position: relative;
+    background: #fff;
+}
+
+.user-list__item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.user-list__item:before {
+    content: "";
+    display: block;
+    border: var(--border-big);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.chat__view {
+    border: var(--border-big);
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    top: -10px;
+    left: -10px;
+    background: #fff;
+}
+
+.chat ul.messages-list {
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+    max-height: 240px;
+    overflow-y: scroll;
+    gap: var(--padding-big);
+    padding: 0 15px;
+}
+
+.send-message-form__input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    color: grey;
+}
+
+.messages-list__item {
+    display: grid;
+    gap: 5px;
+}
+
+.messages-list__item .date {
+    font-size: 13px;
+}
+
+.messages-list__item .mess-text {
+    font-size: 16px;
+}
+
+.messages-list__item.self .date {
+    color: #f96d6d;
+}
+
+.messages-list__item.self {
+    text-align: right;
+}
