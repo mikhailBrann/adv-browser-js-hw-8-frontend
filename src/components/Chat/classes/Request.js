@@ -1,6 +1,9 @@
-const wsPort = process.env.PORT ? process.env.PORT : 6868;
-const serverUrl = process.env.PROD_SERVER ? process.env.PROD_SERVER : '://adv-browser-js-hw-8-backend.onrender.com';
-const serverProtocol = process.env.PROD_PROTOCOL ? process.env.PROD_PROTOCOL : 'https';
+// process.env.PORT
+// process.env.PROD_SERVER
+// process.env.PROD_PROTOCOL
+const wsPort = 6868;
+const serverUrl = '://adv-browser-js-hw-8-backend.onrender.com';
+const serverProtocol = 'https';
 
 export default class Request {
     constructor() {
