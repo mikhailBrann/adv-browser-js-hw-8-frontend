@@ -2,8 +2,8 @@
 // process.env.PROD_SERVER
 // process.env.PROD_PROTOCOL
 
-const wsPort = 6868;
-const serverUrl = '://adv-browser-js-hw-8-backend.onrender.com';
+const wsPort = process.env.PORT || 6868;
+const serverUrl = process.env.PROD_SERVER || '://adv-browser-js-hw-8-backend.onrender.com';
 
 export default class WsConnector {
     constructor(url=`ws${serverUrl}`) {
